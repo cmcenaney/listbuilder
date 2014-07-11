@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+    <title>NYT List Builder</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/listbuilder.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="navbar navbar-inverse" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">NYT List Builder</a>
+        </div>
+        <div class="navbar-collapse collapse">
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <form name="myform" action="" method="GET">
+            <p>kicker <input TYPE="text" name="kicker" value="" class="kicker_form_box"></p>
+            <p>headline <input TYPE="text" name="headline" value="" class="headline_form_box"></p>
+            <p>body text <input type="text" name="body_text" value="" class="body_form_box"></p>
+            <p>image url <input TYPE="text" name="img_url" value="" class="img_form_box"></p>
+            <p>image caption <input TYPE="text" name="img_caption" value=""></p>
+            <p>image credit <input TYPE="text" name="img_credit" value="" class="imgcredit_form_box"></p>
+            <INPUT type="button" name="button" value="Submit" onClick="testResults(this.form)">
+          </form>
+        </div>
+        <div class="col-md-6">
+          <script id="some-template" type="text/x-handlebars-template">
+          <pre>
+            {{#lists}}
+              &lt;p&gt;{{kicker}}&lt;/p&gt;
+              &lt;p&gt;{{headline}}&lt;/p&gt;
+              &lt;p&gt;{{body_text}}&lt;/p&gt;
+              &lt;img src='{{img_url}}'&gt;
+              &lt;p&gt;{{img_caption}}&lt;/p&gt;
+              &lt;p&gt;{{img_credit}}&lt;/p&gt;
+            {{/lists}}  
+            </pre>
+          </script>
+          <div id="content"></div>
+        </div>  
+      </div>
+      <hr>
+      <footer>
+      </footer>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/handlebars-v1.3.0.js"></script>
+    <script src="js/listbuilder.js"></script>
+  </body>
+</html>
