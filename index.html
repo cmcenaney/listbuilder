@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
-    <title>NYT List Builder</title>
+    <title></title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/listbuilder.css" rel="stylesheet">
   </head>
@@ -21,7 +21,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">NYT List Builder</a>
+          <a class="navbar-brand" href="#"></a>
         </div>
         <div class="navbar-collapse collapse">
         </div>
@@ -42,16 +42,97 @@
         </div>
         <div class="col-md-6">
           <script id="some-template" type="text/x-handlebars-template">
-          <pre>
             {{#lists}}
-              &lt;p&gt;{{kicker}}&lt;/p&gt;
-              &lt;p&gt;{{headline}}&lt;/p&gt;
-              &lt;p&gt;{{body_text}}&lt;/p&gt;
-              &lt;img src='{{img_url}}'&gt;
-              &lt;p&gt;{{img_caption}}&lt;/p&gt;
-              &lt;p&gt;{{img_credit}}&lt;/p&gt;
-            {{/lists}}  
-            </pre>
+<textarea>
+<style>
+  .wrapper-kill {
+    margin: 50px;
+  }
+
+  .list-item {
+    margin: 50px 0 0 0;
+    width: 100%;
+  }
+
+  .list-images {
+    margin-right: 5%;
+    height: 100%;
+    float: left;
+    width: 45%;
+  }
+
+  .list-images img {
+    width: 100%;
+  }
+
+  .list-caption {
+    font-size: 13px;
+    line-height: 17px;
+    font-family: "nyt",georgia,"times new roman",times,serif;
+    color: #666;
+  }
+
+  .list-caption span {
+    font-size: 11px;
+    line-height: 18px;
+    font-family: "nyt",georgia,"times new roman",times,serif;
+    color: #999;
+  }
+
+  .list-content {
+    width: 50%;
+    float: left;
+  }
+
+  .list-line {
+    margin: 0 0 30px 0;
+    background-color: #000;
+    height: 1px;
+  }
+
+  .list-kicker {
+    font-family: 'franklin';
+    font-size: 12px;
+    margin: 0 0 8px 0;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  .list-headline {
+    margin: 0 0 12px 0;
+    font-family: 'nyt';
+    font-size: 25px;
+  }
+
+  .list-body {
+    font-size: 16px;
+    line-height: 23px;
+    font-family: georgia,"times new roman",times,serif;
+  }
+
+  .list-clear {
+    clear: left;
+  }
+</style>
+
+<div class="wrapper-kill">
+  <div class="list-item">
+    <div class="list-images">
+      <img src="{{img_url}}">
+      <div class="list-caption">{{img_caption}}<span>{{img_credit}}</span></div>
+    </div>
+    <div class="list-content">
+      <div class="list-line"></div>
+      <div class="list-kicker">{{kicker}}</div>
+      <div class="list-headline">{{headline}}</div>
+      <div class="list-body">{{body_text}}</div>
+    </div>
+    <div class="list-clear"></div>
+  </div>
+</div>
+
+</textarea>
+            {{/lists}} 
           </script>
           <div id="content"></div>
         </div>  
