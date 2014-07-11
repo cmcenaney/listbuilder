@@ -29,7 +29,7 @@
     </div>
     <div class="container">
       <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-6 form_section">
           <form name="myform" action="" method="GET">
             <p>kicker <input TYPE="text" name="kicker" value="" class="kicker_form_box"></p>
             <p>headline <input TYPE="text" name="headline" value="" class="headline_form_box"></p>
@@ -37,6 +37,7 @@
             <p>image url <input TYPE="text" name="img_url" value="" class="img_form_box"></p>
             <p>image caption <input TYPE="text" name="img_caption" value=""></p>
             <p>image credit <input TYPE="text" name="img_credit" value="" class="imgcredit_form_box"></p>
+            <INPUT type="button" name="button" value="Add Item" onClick="newItem(this.form)">
             <INPUT type="button" name="button" value="Submit" onClick="testResults(this.form)">
           </form>
         </div>
