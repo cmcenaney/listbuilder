@@ -1,45 +1,16 @@
 
-function testResults (form) {
-	var kicker = form.kicker.value;
-    var headline = form.headline.value;
-    var body_text = form.body_text.value;
-    var img_url = form.img_url.value;
-    var img_caption = form.img_caption.value;
-    var img_credit = form.img_credit.value;
-    
-
-  
 
 
-	var source   = $("#some-template").html();
-	var template = Handlebars.compile(source);
-	var data = { 
-		lists: [{
-			kicker: kicker,
-			headline: headline, 
-			body_text: body_text,
-			img_url: img_url, 
-			img_caption: img_caption, 
-			img_credit: img_credit
-		}]
-	};
-
-
-	$("#content").html(template(data));
-
-}
+var num = 0;
 
 function newItem(form){
+    num ++;
+ 
 
+    new_items = {};
+    
+    
 
-	var kicker = form.kicker.value;
-    var headline = form.headline.value;
-    var body_text = form.body_text.value;
-    var img_url = form.img_url.value;
-    var img_caption = form.img_caption.value;
-    var img_credit = form.img_credit.value;
-
-    console.log(kicker);
 	$('.form_section').append(
 		'<form name="myform" action="" method="GET">' +
             '<p>kicker <input TYPE="text" name="kicker" value="" class="kicker_form_box"></p>' +
@@ -54,11 +25,55 @@ function newItem(form){
 				
 	);
 
-	console.log(headline);
-    console.log(img_url);
-    console.log(body_text);
+    var kicker = form.kicker.value;
+    var headline = form.headline.value;
+    var body_text = form.body_text.value;
+    var img_url = form.img_url.value;
+    var img_caption = form.img_caption.value;
+    var img_credit = form.img_credit.value;
+
+    new_items.push(kicker);
+    new_items.push(headline);
+    new_items.push(body_text);
+    new_items.push(img_url);
+    new_items.push(img_caption);
+    new_items.push(img_credit);
+
+    console.log(new_items);
 
 }
 
+function testResults (form) {
+ 
+    var kicker = form.kicker.value;
+    var headline = form.headline.value;
+    var body_text = form.body_text.value;
+    var img_url = form.img_url.value;
+    var img_caption = form.img_caption.value;
+    var img_credit = form.img_credit.value;
+    
+
+  
+
+
+    var source   = $("#some-template").html();
+    var template = Handlebars.compile(source);
+    var data = { 
+        lists: [{
+            kicker: kicker,
+            headline: headline, 
+            body_text: body_text,
+            img_url: img_url, 
+            img_caption: img_caption, 
+            img_credit: img_credit
+        }]
+    };
+
+    console.log(data);
+
+
+    $("#content").html(template(data));
+
+}
 
 
