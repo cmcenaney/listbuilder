@@ -24,21 +24,24 @@
           <a class="navbar-brand" href="#"><img src="images/times.svg">The List Builder</a>
         </div>
         <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#"><span class="glyphicon glyphicon-paperclip"></span> Export to Scoop</a></li>
+          </ul>
         </div>
       </div>
     </div>
-    <div class="container">
+    <div class="container top-pad">
       <div class="row">
-        <div class="col-md-6 form_section ">
+        <div class="col-md-6 form_section">
 
           <form name="myform" action="" method="GET">
-            <p>kicker <input TYPE="text" name="kicker" value="" class="kicker_form_box form-control"></p>
-            <p>headline <input TYPE="text" name="headline" value="" class="headline_form_box form-control"></p>
-            <p>body text <input type="text" name="body_text" value="" class="body_form_box form-control"></p>
-            <p>image url <input TYPE="text" name="img_url" value="" class="img_form_box form-control"></p>
-            <p>image caption <input TYPE="text" name="img_caption" value="" class="form-control"></p>
-            <p>image credit <input TYPE="text" name="img_credit" value="" class="imgcredit_form_box form-control"></p>
-            <INPUT type="button" name="button" value="Add Item" onClick="newItem(this.form)">
+            <p><h6>kicker</h6> <input TYPE="text" name="kicker" value="" class="kicker_form_box form-control"></p>
+            <p><h6>headline</h6> <input TYPE="text" name="headline" value="" class="headline_form_box form-control"></p>
+            <p><h6>body text</h6> <input type="text" name="body_text" value="" class="body_form_box form-control"></p>
+            <p><h6>image url</h6> <input TYPE="text" name="img_url" value="" class="img_form_box form-control"></p>
+            <p><h6>image caption</h6> <input TYPE="text" name="img_caption" value="" class="form-control"></p>
+            <p><h6>image credit</h6> <input TYPE="text" name="img_credit" value="" class="imgcredit_form_box form-control"></p>
+            <INPUT type="button" name="button" value="Add Item" class="btn btn-success" onClick="newItem(this.form)">
             <INPUT type="button" name="button" value="Submit" onClick="testResults(this.form)">
           </form>
         </div>

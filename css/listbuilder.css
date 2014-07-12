@@ -4,8 +4,15 @@
   margin: -6px 10px 0 0;
 }
 
+h6 {
+	font-weight: normal;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+}
 
-
+.top-pad {
+	padding-top: 50px;
+}
 
 form .body_form_box{
 	padding-bottom:300px;
@@ -29,8 +36,10 @@ input{
 
 textarea{
 	width:100%;
+	background-color: #eee;
 	height:600px;
-	padding-top:10px 10px 0px 0px ;
+	margin-top: 25px;
+	padding: 25px;
 	border:1px solid #ccc;
 }
 
