@@ -1,6 +1,11 @@
-img{
-	width:400px;
+.navbar-brand img {
+
+  height: 30px;
+  margin: -6px 10px 0 0;
 }
+
+
+
 
 form .body_form_box{
 	padding-bottom:300px;
