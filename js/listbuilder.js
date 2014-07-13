@@ -54,9 +54,13 @@ function newItem(form){
 				
 	);
 
-	console.log(headline);
-    console.log(img_url);
+	console.log(kicker);
+    console.log(headline);
     console.log(body_text);
+    console.log(img_url);
+    console.log(img_caption);
+    console.log(img_credit);
+
 
 }
 
