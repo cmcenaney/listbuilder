@@ -71,13 +71,7 @@ function newItem(form){
     // console.log(new_items);
 }
 
-function testResults (form, data) {
-    var source   = $("#some-template").html();
-    var template = Handlebars.compile(source);
-    $("#content").html(template(data));
 
-    
 
-}
 
 
