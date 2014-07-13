@@ -12,115 +12,56 @@
     <link href="css/listbuilder.css" rel="stylesheet">
   </head>
   <body>
-    <div class="navbar navbar-inverse" role="navigation">
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
+            
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#"></a>
+          <a class="navbar-brand" href="#"><img src="images/times.svg">The List Builder</a>
         </div>
         <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+           <!--  <li><a href="#" onClick="testResults(this.form)"><span class="glyphicon glyphicon-paperclip"></span> Export to Scoop</a></li> -->
+           <li><INPUT type="button" class="btn btn-info" name="button" value="Export to Scoop" onClick="testResults()"></li>
+          </ul>
         </div>
       </div>
     </div>
-    <div class="container">
+    <div class="container top-pad">
       <div class="row">
         <div class="col-md-6 form_section">
+
           <form name="myform" action="" method="GET">
-            <p>kicker <input TYPE="text" name="kicker" value="" class="kicker_form_box"></p>
-            <p>headline <input TYPE="text" name="headline" value="" class="headline_form_box"></p>
-            <p>body text <input type="text" name="body_text" value="" class="body_form_box"></p>
-            <p>image url <input TYPE="text" name="img_url" value="" class="img_form_box"></p>
-            <p>image caption <input TYPE="text" name="img_caption" value=""></p>
-            <p>image credit <input TYPE="text" name="img_credit" value="" class="imgcredit_form_box"></p>
-            <INPUT type="button" name="button" value="Add Item" onClick="newItem(this.form)">
-            <INPUT type="button" name="button" value="Submit" onClick="testResults(this.form)">
+            <p><h6>kicker</h6> <input TYPE="text" name="kicker" value="this is the kicker" class="kicker_form_box form-control"></p>
+            <p><h6>headline</h6> <input TYPE="text" name="headline" value="" class="headline_form_box form-control"></p>
+            <p><h6>body text</h6> <input type="text" name="body_text" value="" class="body_form_box form-control"></p>
+            <p><h6>image url</h6> <input TYPE="text" name="img_url" value="" class="img_form_box form-control"></p>
+            <p><h6>image caption</h6> <input TYPE="text" name="img_caption" value="" class="imgcaption_form_box form-control"></p>
+            <p><h6>image credit</h6> <input TYPE="text" name="img_credit" value="" class="imgcredit_form_box form-control"></p>
+            <INPUT type="button" name="button" value="Add Item" class="btn btn-success" onClick="newItem(this.form)">
+            <INPUT type="button" name="button" value="Submit" class="btn btn-info" onClick="testResults()">
           </form>
         </div>
         <div class="col-md-6">
           <script id="some-template" type="text/x-handlebars-template">
-            {{#lists}}
+            
 <textarea>
-<style>
-  .wrapper-kill {
-    margin: 50px;
-  }
+<style> .interactive{border-top:0!important;border-bottom:0!important}.interactive.layout-sub-medium{width:540px;margin-left:73px}.list-wrapper{margin:20px 0 0 31px;display:inline-block}.list-item{margin:0 0 50px}.list-images{margin-right:5%;height:100%;float:left;width:45%}.list-images img{width:100%}.list-content{width:50%;float:left}.list-line{margin:0 0 30px;background-color:#000;height:1px}.list-kicker{font-size:11px;line-height:13px;letter-spacing:3px;font-weight:500;font-family:nyt-franklin,arial,helvetica,sans-serif;margin:0 0 8px;text-transform:uppercase}.list-headline{margin:0 0 12px;font-size:25px;font-weight:700;font-family:nyt-cheltenham,georgia,"times new roman",times,serif}.list-body{font-size:16px;line-height:23px;font-family:georgia,"times new roman",times,serif}.list-clear{clear:left}@media only screen and (max-width:768px){.list-wrapper{width:100%;margin:10px 0}.list-content{width:100%;float:none}.list-images{float:none;margin:0 0 20px}.list-line{display:none}}</style>
 
-  .list-item {
-    margin: 50px 0 0 0;
-    width: 100%;
-  }
-
-  .list-images {
-    margin-right: 5%;
-    height: 100%;
-    float: left;
-    width: 45%;
-  }
-
-  .list-images img {
-    width: 100%;
-  }
-
-  .list-caption {
-    font-size: 13px;
-    line-height: 17px;
-    font-family: "nyt",georgia,"times new roman",times,serif;
-    color: #666;
-  }
-
-  .list-caption span {
-    font-size: 11px;
-    line-height: 18px;
-    font-family: "nyt",georgia,"times new roman",times,serif;
-    color: #999;
-  }
-
-  .list-content {
-    width: 50%;
-    float: left;
-  }
-
-  .list-line {
-    margin: 0 0 30px 0;
-    background-color: #000;
-    height: 1px;
-  }
-
-  .list-kicker {
-    font-family: 'franklin';
-    font-size: 12px;
-    margin: 0 0 8px 0;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-  }
-
-  .list-headline {
-    margin: 0 0 12px 0;
-    font-family: 'nyt';
-    font-size: 25px;
-  }
-
-  .list-body {
-    font-size: 16px;
-    line-height: 23px;
-    font-family: georgia,"times new roman",times,serif;
-  }
-
-  .list-clear {
-    clear: left;
-  }
-</style>
-
-<div class="wrapper-kill">
+<div class="list-wrapper">
+{{#lists}}
   <div class="list-item">
     <div class="list-images">
       <img src="{{img_url}}">
-      <div class="list-caption">{{img_caption}}<span>{{img_credit}}</span></div>
+      <figcaption class="caption" itemprop="caption description">
+        <span class="caption-text">{{img_caption}}</span>
+        <span class="credit" itemprop="copyrightHolder">
+        <span class="visually-hidden">Credit </span>{{img_credit}}        </span>
+      </figcaption>
     </div>
     <div class="list-content">
       <div class="list-line"></div>
@@ -130,21 +71,33 @@
     </div>
     <div class="list-clear"></div>
   </div>
+{{/lists}} 
 </div>
-
 </textarea>
-            {{/lists}} 
+           
           </script>
           <div id="content"></div>
         </div>  
       </div>
       <hr>
-      <footer>
-      </footer>
+      <!-- <footer>
+      </footer> -->
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>-->
+    <script src ="js/jquery-2.0.3.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/handlebars-v1.3.0.js"></script>
-    <script src="js/listbuilder.js"></script>
+    <script src="js/listbuilder-v1.js"></script>
+
+
+
+
+
+
+ 
+
+
+
+
   </body>
 </html>
