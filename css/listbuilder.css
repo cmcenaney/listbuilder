@@ -4,6 +4,11 @@
   margin: -6px 10px 0 0;
 }
 
+.navbar-right{
+	margin-right:105px;
+	margin-top:5px;
+}
+
 h6 {
 	font-weight: normal;
 	letter-spacing: 3px;
@@ -35,13 +40,42 @@ input{
 }
 
 textarea{
-	width:100%;
+	font-family: courier;
 	background-color: #eee;
-	height:600px;
+	height:100%;
+	max-height:500px;
 	margin-top: 25px;
 	padding: 25px;
 	border:1px solid #ccc;
+	position:fixed;
+	top:90px;
+	margin-bottom:40px;
+	width:100%;
+	float:right;
+	max-width:572px;
 }
+
+.btn-success{
+	margin-bottom:60px;
+}
+
+.btn-info{
+	margin-top:3px;
+}
+
+.row{
+	margin-top: 30px;
+}
+
+@media only screen and (max-width: 1000px) {
+
+	textarea{
+		position:relative;
+		width:100% !important;
+	}
+
+	}
+
 
 
 

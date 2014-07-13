@@ -49,7 +49,7 @@ function newItem(form){
             '<p>image caption <input TYPE="text" name="img_caption" value=""></p>' +
             '<p>image credit <input TYPE="text" name="img_credit" value="" class="imgcredit_form_box"></p>' +
             '<INPUT type="button" name="button" value="Add Item" onClick="newItem(this.form)">' +
-            '<INPUT type="button" name="button" value="Submit" onClick="testResults(this.form)">' +
+         
           '</form>'
                 
     );
