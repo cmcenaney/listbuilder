@@ -25,7 +25,8 @@
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#"><span class="glyphicon glyphicon-paperclip"></span> Export to Scoop</a></li>
+           <!--  <li><a href="#" onClick="testResults(this.form)"><span class="glyphicon glyphicon-paperclip"></span> Export to Scoop</a></li> -->
+           <li><INPUT type="button" class="btn btn-info" name="button" value="Export to Scoop" onClick="testResults(this.form)"></li>
           </ul>
         </div>
       </div>
@@ -42,12 +43,11 @@
             <p><h6>image caption</h6> <input TYPE="text" name="img_caption" value="" class="form-control"></p>
             <p><h6>image credit</h6> <input TYPE="text" name="img_credit" value="" class="imgcredit_form_box form-control"></p>
             <INPUT type="button" name="button" value="Add Item" class="btn btn-success" onClick="newItem(this.form)">
-            <INPUT type="button" name="button" value="Submit" onClick="testResults(this.form)">
           </form>
         </div>
         <div class="col-md-6">
           <script id="some-template" type="text/x-handlebars-template">
-            {{#lists}}
+            
 <textarea>
 <style>
   .wrapper-kill {
@@ -121,6 +121,7 @@
 </style>
 
 <div class="wrapper-kill">
+{{#lists}}
   <div class="list-item">
     <div class="list-images">
       <img src="{{img_url}}">
@@ -134,10 +135,11 @@
     </div>
     <div class="list-clear"></div>
   </div>
+   {{/lists}} 
 </div>
 
 </textarea>
-            {{/lists}} 
+           
           </script>
           <div id="content"></div>
         </div>  
@@ -146,9 +148,21 @@
       <footer>
       </footer>
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>-->
+    <script src ="js/jquery-2.0.3.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/handlebars-v1.3.0.js"></script>
-    <script src="js/listbuilder.js"></script>
+    <script src="js/listbuilder-v1.js"></script>
+
+
+
+
+
+
+ 
+
+
+
+
   </body>
 </html>
