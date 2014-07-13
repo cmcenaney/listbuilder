@@ -20,16 +20,22 @@ h6 {
 }
 
 form .body_form_box{
+	padding-top:20px;
 	padding-bottom:300px;
 	width:100%;
-	overflow:scroll;
+
+  word-wrap: break-word;
+
+	
 }
 
 form .imgcaption_form_box{
+	padding-top:20px;
 	padding-bottom:100px;
 }
 
 form .imgcredit_form_box{
+	padding-top:20px;
 	padding-bottom:50px;
 
 }
@@ -39,7 +45,7 @@ input{
 	
 }
 
-textarea{
+.code_output{
 	font-family: courier;
 	background-color: #eee;
 	height:100%;
@@ -56,8 +62,16 @@ textarea{
 }
 
 .btn-success{
-	margin-bottom:60px;
+	width:49%;
+	float:left;
+	margin-right:2%;
 }
+
+.btn-warning{
+	margin-bottom:60px;
+	width:49%;
+}
+
 
 .btn-info{
 	margin-top:3px;
