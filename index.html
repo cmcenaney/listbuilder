@@ -25,7 +25,17 @@
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-           <li><INPUT type="button" class="btn btn-info" name="button" value="Export to Scoop" onClick="testResults()"></li>
+
+            <!-- Single button -->
+<div class="btn-group">
+  <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
+    Export to Scoop <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" role="menu">
+    <li onClick="threeHundred()"><a href="#">Article Page</a></li>
+    <li onClick="testResults()"><a href="#">Full Page</a></li>
+  </ul>
+</div>
           </ul>
         </div>
       </div>
@@ -38,13 +48,13 @@
             <p><h6>kicker</h6> <input TYPE="text" name="kicker" value="Kicker goes here" class="kicker_form_box form-control"></p>
             <p><h6>headline</h6> <input TYPE="text" name="headline" value="Astro Coffee" class="headline_form_box form-control"></p>
             
-          <!--   <p><h6>body text</h6>
+           <!--  <p><h6>body text</h6>
               <textarea rows="10" cols="80" name="body_text" form="myform" value="this" class="body_form_box form-control">
             </textarea>
             </p> -->
 
 
-            <p><h6>body text</h6> <input type="textarea" name="body_text" value="Two former employees of London’s revered Monmouth Coffee Company opened this spot in 2011, and its impeccable genes are evident in its meticulous sourcing of beans from places like Ritual Coffee Roasters in San Francisco and George Howell Coffee in Acton, Mass. Visitors can flip through old issues of Monocle magazine in a quirky, industrial space with exposed brick walls and high ceilings." class="body_form_box form-control"></p>
+            <p><h6>body text</h6> <input type="text" size="20" name="body_text" value="Two former employees of London’s revered Monmouth Coffee Company opened this spot in 2011, and its impeccable genes are evident in its meticulous sourcing of beans from places like Ritual Coffee Roasters in San Francisco and George Howell Coffee in Acton, Mass. Visitors can flip through old issues of Monocle magazine in a quirky, industrial space with exposed brick walls and high ceilings." class="body_form_box form-control"></p>
 
             <p><h6>image url</h6> <input TYPE="text" name="img_url" value="http://static01.nyt.com/images/2014/06/22/travel/22-surfacing-astro/22-surfacing-astro-master675.jpg" class="img_form_box form-control"></p>
             <p><h6>image caption</h6> <input TYPE="text" name="img_caption" value="Astro Coffee opened in 2011." class="imgcaption_form_box form-control"></p>
@@ -60,8 +70,8 @@
         <div class="col-md-6">
           <script id="some-template" type="text/x-handlebars-template">
             
-<textarea class="code_output">
-<style> .interactive{border-top:0!important;border-bottom:0!important}.interactive.layout-sub-medium{width:540px;margin-left:73px}.list-wrapper{margin:20px 0 0 31px;display:inline-block}.list-item{margin:0 0 50px}.list-images{margin-right:5%;height:100%;float:left;width:45%}.list-images img{width:100%}.list-content{width:50%;float:left}.list-line{margin:0 0 30px;background-color:#000;height:1px}.list-kicker{font-size:11px;line-height:13px;letter-spacing:3px;font-weight:500;font-family:nyt-franklin,arial,helvetica,sans-serif;margin:0 0 8px;text-transform:uppercase}.list-headline{margin:0 0 12px;font-size:25px;font-weight:700;font-family:nyt-cheltenham,georgia,"times new roman",times,serif}.list-body{font-size:16px;line-height:23px;font-family:georgia,"times new roman",times,serif}.list-clear{clear:left}@media only screen and (max-width:768px){.list-wrapper{width:100%;margin:10px 0}.list-content{width:100%;float:none}.list-images{float:none;margin:0 0 20px}.list-line{display:none}}</style>
+<textarea id="code_output">
+
 
 <div class="list-wrapper">
 {{#lists}}
