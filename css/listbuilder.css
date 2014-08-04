@@ -73,8 +73,12 @@ input{
 }
 
 
-.btn-info{
+.btn-info, .btn-danger{
 	margin-top:3px;
+}
+
+.btn-danger{
+	
 }
 
 .row{
